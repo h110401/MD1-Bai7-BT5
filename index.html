@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<h1>DO YOU LOVE ME?</h1>
+
+<button id="noBut" onmouseover="moveRandom()">No</button>
+
+<button onclick="alert('<3')" style="top: 100px; left: 150px">Yes</button>
+
+<script>
+
+    document.getElementById('noBut').style.top = '100px';
+    document.getElementById('noBut').style.left = '70px';
+
+    function moveRandom() {
+        let windowHeight = window.innerHeight;
+        let windowWidth = window.innerWidth;
+        console.log(windowWidth)
+        document.getElementById('noBut').style.top = Math.floor(Math.random() * (windowHeight - 30)) + 'px'
+        document.getElementById('noBut').style.left = Math.floor(Math.random() * (windowWidth - 50)) + 'px'
+
+    }
+</script>
+
+</body>
+</html>
